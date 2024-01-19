@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import HeroDark from '../../public/hero-dark.png'
+import HeroDark from '../../../public/hero-dark.png'
 
 export default function Hero() {
     return (
