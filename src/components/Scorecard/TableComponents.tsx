@@ -1,4 +1,4 @@
-type StatusType = 'GOOD' | 'OKAY' | 'NEEDS IMPROVEMENT' | 'INPUT NEEDED';
+.import { StatusType, Row } from '../../types/TableRowTypes';
 
 function getStatusColor(status: StatusType): string {
     switch (status) {
@@ -25,26 +25,36 @@ function Status({ text }: StatusProps) {
             <p className="text-white text-xs font-bold uppercase tracking-wide p-2">{text}</p>
         </div>
     );
-}
+}    
 
+// Component to handle the title row of the table (first row)
 function TitleRow() {
-
+    return (
+        <div className="flex flex-row items-center justify-start border-2 p-2 border-accentGray">
+            <div className="mr-4">Item 1</div>
+            <div className="mr-4">Item 2</div>
+            <Status text="GOOD" />
+        </div>
+    )
 }
 
 
 interface TableRowProps {
-    attribute: string,
-    category: string,
-    membersAtRisk: string,
-    assessment: StatusType,
-    comments: string,
-};
+    // Used to determine if row is even or odd for styling
+    isEven: boolean,
+    data: Row,
+}
 
-export default function TableRow() {
+
+export default function TableRow({ isEven, data }: TableRowProps) {
+    const bgColorClass = isEven ? 'bg-black/07' : 'bg-slateGray';
+
     return (
-        <div>
-            <Status text="INPUT NEEDED" />
+        <div className={`flex flex-row items-center justify-start border-2 border-accentGray p-2 ${bgColorClass}`}>
+            <div className="mr-4">Item 1</div>
+            <div className="mr-4">Item 2</div>
+            <Status text={data.assessment} />
         </div>
-    )
+    );
 }
 

@@ -19,6 +19,7 @@ const config: Config = {
       colors: {
         actionOrange: '#F56E0E',
         slateGray: '#293036',
+        accentGray: '#3C4D5A',
       },
     },
   },

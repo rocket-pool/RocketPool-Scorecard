@@ -1,0 +1,16 @@
+[
+    {
+        "attribute": "Operators run their own nodes (no white labeling)",
+        "category": "Validator set",
+        "membersAtRisk": "None",
+        "assessment": "GOOD",
+        "comments": "There are currently over 3,488 unique operators. More info"
+    },
+    {
+        "attribute": "Good Performance",
+        "category": "Validator set",
+        "membersAtRisk": "None",
+        "assessment": "GOOD",
+        "comments": "Node operators continue to grow and maintain uptime."
+    }
+]
