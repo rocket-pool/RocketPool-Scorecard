@@ -1,4 +1,4 @@
-.import { StatusType, Row } from '../../types/TableRowTypes';
+import { StatusType, Row } from '../../types/TableRowTypes';
 
 function getStatusColor(status: StatusType): string {
     switch (status) {
