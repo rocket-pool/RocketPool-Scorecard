@@ -73,7 +73,7 @@
         "attribute": "No operator has more than 1% of total stake",
         "category": "Validator set",
         "membersAtRisk": "RPL Holders",
-        "assessment": "GOOD",
+        "assessment": "OKAY",
         "comments": "Top node operator has 1.6% of total stake. See here"
     },
     {
