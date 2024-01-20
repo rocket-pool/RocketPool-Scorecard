@@ -50,7 +50,7 @@ export default function TableRow({ isEven, data }: TableRowProps) {
     const bgColorClass = isEven ? 'bg-black/07' : 'bg-slateGray';
 
     return (
-        <div className={`flex flex-row items-center justify-start border-2 border-accentGray p-2 ${bgColorClass}`}>
+        <div className={`flex flex-row items-center justify-start p-2 ${bgColorClass}`}>
             <div className="mr-4">Item 1</div>
             <div className="mr-4">Item 2</div>
             <Status text={data.assessment} />
