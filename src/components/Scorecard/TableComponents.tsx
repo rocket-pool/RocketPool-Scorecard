@@ -8,7 +8,7 @@ function getStatusColor(status: StatusType): string {
             return 'bg-yellow-600';
         case 'NEEDS IMPROVEMENT':
             return 'bg-red-600';
-        case 'INPUT NEEDED':
+        case 'COMMUNITY INPUT NEEDED':
             return 'bg-orange-600';
         default:
             return '';
@@ -50,10 +50,12 @@ export default function TableRow({ isEven, data }: TableRowProps) {
     const bgColorClass = isEven ? 'bg-black/07' : 'bg-slateGray';
 
     return (
-        <div className={`flex flex-row items-center justify-start p-2 ${bgColorClass}`}>
-            <div className="mr-4">Item 1</div>
-            <div className="mr-4">Item 2</div>
+        <div className={`grid grid-cols-5 gap-2 items-center p-2 ${bgColorClass}`}>
+            <div>{data.attribute}</div>
+            <div>{data.category}</div>
+            <div>{data.membersAtRisk}</div>
             <Status text={data.assessment} />
+            <div>{data.comments}</div>
         </div>
     );
 }

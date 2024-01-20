@@ -7,8 +7,8 @@ const exampleRows: Row[] = jsonData as Row[];
 
 export default function Scorecard() {
   return (
-    <section className="p-24">
-      <div className="z-10 max-w-5xl w-full font-mono text-sm border-2 border-accentGray">
+    <section className="p-24 w-full">
+      <div className="z-10 w-full font-mono text-sm border-2 border-accentGray">
         {
           exampleRows.map((row, i) => (
             <TableRow key={i} isEven={i % 2 == 0} data={row}/>
