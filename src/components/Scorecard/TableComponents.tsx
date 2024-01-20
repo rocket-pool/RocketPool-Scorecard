@@ -27,18 +27,6 @@ function Status({ text }: StatusProps) {
     );
 }    
 
-// Component to handle the title row of the table (first row)
-function TitleRow() {
-    return (
-        <div className="flex flex-row items-center justify-start border-2 p-2 border-accentGray">
-            <div className="mr-4">Item 1</div>
-            <div className="mr-4">Item 2</div>
-            <Status text="GOOD" />
-        </div>
-    )
-}
-
-
 interface TableRowProps {
     // Used to determine if row is even or odd for styling
     isEven: boolean,
