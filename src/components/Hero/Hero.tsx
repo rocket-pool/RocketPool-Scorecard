@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import HeroDark from '../../../public/hero-dark.png'
 import HeroLight from '../../../public/hero-light.png'
+import InputIcon from '../../../public/input.svg'
 
 export default function Hero() {
   return (
@@ -57,6 +58,21 @@ export default function Hero() {
             />
           </div>
           </div>
+        </div>
+      </div>
+      <div className="container px-4 md:px-6 mt-32">
+        <div className="w-[45%] mt-10 ml-auto bg-gray-100 p-8 rounded-lg border-2 border-foreground dark:border-none dark:bg-slateGray">
+          <h2 className="text-xl font-poppins font-bold mb-2">Want to provide a comment / make a change?</h2>
+          <p className="text-md text-gray-500 dark:text-white/40">
+            Click the 
+            <Image
+              alt="Forum Input Link"
+              src={InputIcon}
+              className="inline-block mx-2"
+            />
+            next to each Comments section to be directed to a forum thread
+            specifically tailored to that section.
+          </p>
         </div>
       </div>
     </section>
