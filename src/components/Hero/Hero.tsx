@@ -5,14 +5,9 @@ export default function Hero() {
     return (
       <section className="w-full py-12">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-2 lg:grid-cols-[30%_300px] lg:gap-4 xl:grid-cols-[50%_400px]">
-            <Image
-              alt="Happy Customer"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square"
-              src={HeroDark}
-            />
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+          <div className="flex flex-row items-center justify-between">
+            <div className="flex-1">
+              <div className="space-y-6">
                 <h1 className="text-header font-poppins font-bold tracking-tighter whitespace-nowrap sm:text-5xl xl:text-6xl/none">
                   Rocket Pool Scorecard
                 </h1>
@@ -21,7 +16,7 @@ export default function Hero() {
                   risk, decentralization, security, and more.  
                 </p>
               </div>
-              <div className="bg-gray-100 p-10 rounded-lg dark:bg-slateGray w-5/6">
+              <div className="mt-10 bg-gray-100 p-10 rounded-lg dark:bg-slateGray w-5/6">
                 <h2 className="text-3xl font-poppins font-bold mb-4">About the Scorecard</h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Rocket Pool strives to create the most optimized community-governed
@@ -33,10 +28,16 @@ export default function Hero() {
                 </p>
               </div>
             </div>
+            <div className="flex-none">
+              <Image
+                alt="Happy Customer"
+                src={HeroDark}
+                layout="responsive"
+                className="rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </section>
     )
-  }
-  
-  
+}
