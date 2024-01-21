@@ -15,12 +15,13 @@ export default function Table({ rows }: { rows: Row[] }) {
           <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap w-1/6">
             Community Members at Risk
           </th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider w-1/6">
+          <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap w-1/12">
             Self-Assessment
           </th>
           <th className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider w-1/4">
             Comments
           </th>
+          <th className="w-1/12"></th>
         </tr>
       </thead>
       <tbody>

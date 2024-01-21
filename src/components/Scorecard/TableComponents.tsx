@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import InputIcon from '../../../public/input.svg';
 import { StatusType, Row } from '../../types/TableRowTypes';
 
 function getStatusColor(status: StatusType): string {
@@ -46,6 +48,14 @@ export default function TableRow({ isEven, data }: TableRowProps) {
           <td className="px-6 py-4">{data.membersAtRisk}</td>
           <Status text={data.assessment} />
           <td className="px-6 py-4">{data.comments}</td>
+          <td className="px-6 py-4">
+            <a href="https://rocketpool.net/" target="_blank" rel="noreferrer">
+              <Image
+                alt="Forum Input Link"
+                src={InputIcon}
+              />
+            </a>
+          </td>
         </tr>
     );
 }
