@@ -60,7 +60,7 @@
         "category": "Governance",
         "membersAtRisk": "None",
         "assessment": "GOOD",
-        "comments": "Link here"
+        "comments": "[Link here](https://docs.rocketpool.net/guides/governance.html#delegation)"
     },
     {
         "attribute": "Operators can permissionlessly enter the set and prove themselves",
