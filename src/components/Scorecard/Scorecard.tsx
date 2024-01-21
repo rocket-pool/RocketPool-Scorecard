@@ -1,67 +1,65 @@
-import TableRow from './TableComponents'
-import type { Row } from '../../types/TableRowTypes'
-import jsonData from '../../../assets/tableInfo.json'
+import Table from './Table';
+import jsonData from '../../../assets/tableInfo.json';
+import type { Row, StatusType } from '../../types/TableRowTypes';
 
+const rows: Row[] = jsonData as Row[];
 
-const exampleRows: Row[] = jsonData as Row[];
+// Mapping statuses to numerical values for sorting
+const statusOrder: { [key in StatusType]: number } = {
+  'GOOD': 1,
+  'OKAY': 2,
+  'NEEDS IMPROVEMENT': 3,
+  'COMMUNITY INPUT NEEDED': 4
+};
 
-export default function ScoreCard() {
-  return (
-    <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
-      <thead className="bg-gray-100 dark:bg-gray-800">
-        <tr>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Scorecard Attribute
-          </th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Category
-          </th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Community Members at Risk
-          </th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Self-Assessment
-          </th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            Comments
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="bg-white dark:bg-gray-900">
-          <td className="px-6 py-4 whitespace-nowrap">Project A</td>
-          <td className="px-6 py-4 whitespace-nowrap">Website redesign</td>
-          <td className="px-6 py-4 whitespace-nowrap">2024-01-20</td>
-          <td className="px-6 py-4 whitespace-nowrap">John Doe</td>
-          <td className="px-6 py-4 whitespace-nowrap">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-              Completed
-            </span>
-          </td>
-        </tr>
-        <tr className="bg-gray-50 dark:bg-gray-800">
-          <td className="px-6 py-4 whitespace-nowrap">Project B</td>
-          <td className="px-6 py-4 whitespace-nowrap">Logo creation</td>
-          <td className="px-6 py-4 whitespace-nowrap">2024-01-15</td>
-          <td className="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-          <td className="px-6 py-4 whitespace-nowrap">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-              In Progress
-            </span>
-          </td>
-        </tr>
-        <tr className="bg-white dark:bg-gray-900">
-          <td className="px-6 py-4 whitespace-nowrap">Project C</td>
-          <td className="px-6 py-4 whitespace-nowrap">Marketing campaign</td>
-          <td className="px-6 py-4 whitespace-nowrap">2024-01-10</td>
-          <td className="px-6 py-4 whitespace-nowrap">Bob Johnson</td>
-          <td className="px-6 py-4 whitespace-nowrap">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-              Delayed
-            </span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  )
+// Sort the rows
+rows.sort((a, b) => {
+  return statusOrder[a.assessment] - statusOrder[b.assessment];
+});
+
+// Define the type for the grouped object
+interface GroupedRows {
+  [key: string]: Row[];
 }
+
+// Function to group rows by assessment
+function groupByAssessment(rows: Row[]) {
+  const grouped = rows.reduce<GroupedRows>((acc, row) => {
+    acc[row.assessment] = acc[row.assessment] || [];
+    acc[row.assessment].push(row);
+    return acc;
+  }, {});
+
+  return grouped;
+}
+
+const groupedRows = groupByAssessment(rows);
+
+export default function Scorecard() {
+
+  function headerByAssessment(assessment: string) {
+    switch (assessment) {
+      case 'GOOD':
+        return 'Where Rocket Pool is Succeeding';
+      case 'OKAY':
+        return 'Where Rocket Pool is Okay but Could Improve';
+      case 'NEEDS IMPROVEMENT':
+        return 'Where Rocket Pool Needs Improvement';
+      case 'COMMUNITY INPUT NEEDED':
+        return 'Where Rocket Pool Needs Your Community Input';
+      default:
+        return '';
+    }
+  }
+
+  return (
+    <div>
+      {Object.keys(groupedRows).map((assessment) => (
+        <div key={assessment}>
+          <h1 className="text-xl font-poppins my-3 font-bold tracking-tighter sm:text-5xl xl:text-xl">{headerByAssessment(assessment)}</h1>
+          <Table rows={groupedRows[assessment] as Row[]} />
+        </div>
+      ))}
+    </div>
+  );
+};

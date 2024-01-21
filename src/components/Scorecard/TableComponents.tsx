@@ -21,9 +21,11 @@ interface StatusProps {
 
 function Status({ text }: StatusProps) {
     return (
-        <div className={`rounded-full ${getStatusColor(text)}`}>
-            <p className="text-white text-xs font-bold uppercase tracking-wide p-2">{text}</p>
-        </div>
+        <td className="px-6 py-4 whitespace-nowrap">
+          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold upppercase tracking-wide text-white ${getStatusColor(text)}`}>
+            {text}
+          </span>
+        </td>
     );
 }    
 
@@ -38,13 +40,13 @@ export default function TableRow({ isEven, data }: TableRowProps) {
     const bgColorClass = isEven ? 'bg-black/07' : 'bg-slateGray';
 
     return (
-        <div className={`grid grid-cols-5 gap-2 items-center p-2 ${bgColorClass}`}>
-            <div>{data.attribute}</div>
-            <div>{data.category}</div>
-            <div>{data.membersAtRisk}</div>
-            <Status text={data.assessment} />
-            <div>{data.comments}</div>
-        </div>
+        <tr className={`${bgColorClass}`}>
+          <td className="px-6 py-4">{data.attribute}</td>
+          <td className="px-6 py-4">{data.category}</td>
+          <td className="px-6 py-4">{data.membersAtRisk}</td>
+          <Status text={data.assessment} />
+          <td className="px-6 py-4">{data.comments}</td>
+        </tr>
     );
 }
 
