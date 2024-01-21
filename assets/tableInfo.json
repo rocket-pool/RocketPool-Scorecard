@@ -115,21 +115,21 @@
         "attribute": "There is a way for stakers to resist malicious governance capture",
         "category": "Governance",
         "membersAtRisk": "None",
-        "assessment": "COMMUNITY INPUT NEEDED",
+        "assessment": "INPUT NEEDED",
         "comments": ""
     },
     {
         "attribute": "Smart contract security",
         "category": "Security",
         "membersAtRisk": "None",
-        "assessment": "COMMUNITY INPUT NEEDED",
+        "assessment": "INPUT NEEDED",
         "comments": ""
     },
     {
         "attribute": "Distributed variation of on-premise infra and cloud providers",
         "category": "Validator set",
         "membersAtRisk": "None",
-        "assessment": "COMMUNITY INPUT NEEDED",
+        "assessment": "INPUT NEEDED",
         "comments": ""
     }
 ]

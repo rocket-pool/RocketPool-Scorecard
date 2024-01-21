@@ -6,16 +6,16 @@ export default function Table({ rows }: { rows: Row[] }) {
     <table className="w-full mb-20 border border-accentGray rounded-lg">
       <thead className="dark:bg-black/07 ">
         <tr>
-          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider w-1/4">
+          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider w-1/5">
             Scorecard Attribute
           </th>
           <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider w-1/6">
             Category
           </th>
-          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider whitespace-nowrap w-1/6">
+          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider whitespace-nowrap w-1/12">
             Community Members at Risk
           </th>
-          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider whitespace-nowrap w-1/12">
+          <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider whitespace-nowrap w-1/5">
             Self-Assessment
           </th>
           <th className="px-6 py-3 text-left text-xs font-medium dark:text-white tracking-wider w-1/4">

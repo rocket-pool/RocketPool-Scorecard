@@ -11,7 +11,7 @@ function getStatusColor(status: StatusType): string {
             return 'bg-yellow-600';
         case 'NEEDS IMPROVEMENT':
             return 'bg-red-600';
-        case 'COMMUNITY INPUT NEEDED':
+        case 'INPUT NEEDED':
             return 'bg-orange-600';
         default:
             return '';
@@ -53,7 +53,7 @@ export default function TableRow({ isEven, data }: TableRowProps) {
               <Markdown>{data.comments}</Markdown>
             </span>
           </td>
-          <td className="px-6 py-4">
+          <td className="px-1 py-4">
             <a href="https://rocketpool.net/" target="_blank" rel="noreferrer">
               <Image
                 alt="Forum Input Link"

@@ -1,4 +1,4 @@
-export type StatusType = 'GOOD' | 'OKAY' | 'NEEDS IMPROVEMENT' | 'COMMUNITY INPUT NEEDED';
+export type StatusType = 'GOOD' | 'OKAY' | 'NEEDS IMPROVEMENT' | 'INPUT NEEDED';
 
 export type Row = {
     attribute: string;
