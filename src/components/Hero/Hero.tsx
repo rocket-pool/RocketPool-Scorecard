@@ -30,12 +30,12 @@ export default function Hero() {
               </p>
             </div>
           </div>
-            <div className=" w-full flex justify-center items-center h-full dark:hidden">
+            <div className="w-full flex justify-center items-center h-full dark:hidden">
               <Image
                 alt="Rocket Pool Scorecard Hero Image"
                 src={HeroLight}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                className="rounded-xl mb-4 md:w-1/2 lg:mb-0 lg:w-full lg:h-auto"
+                className="rounded-xl mb-4 w-3/4 md:w-1/2 lg:mb-0 lg:w-full lg:h-auto"
                 priority={true}
               />
             </div>
