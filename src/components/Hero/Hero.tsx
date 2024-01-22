@@ -31,32 +31,32 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex-none">
-          <div className="dark:hidden">
-            <Image
-              alt="Rocket Pool Scorecard Hero Image"
-              src={HeroLight}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-              className="rounded-xl"
-              priority
-            />
-          </div>
-          <div className="hidden dark:block">
-            <Image
-              alt="Rocket Pool Scorecard Hero Image"
-              src={HeroDark}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-              className="rounded-xl"
-              priority
-            />
-          </div>
+            <div className="dark:hidden">
+              <Image
+                alt="Rocket Pool Scorecard Hero Image"
+                src={HeroLight}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                className="rounded-xl"
+                priority
+              />
+            </div>
+            <div className="hidden dark:block">
+              <Image
+                alt="Rocket Pool Scorecard Hero Image"
+                src={HeroDark}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                className="rounded-xl"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
