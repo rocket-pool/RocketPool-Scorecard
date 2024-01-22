@@ -30,21 +30,21 @@ export default function Hero() {
               </p>
             </div>
           </div>
-            <div className="flex justify-center items-center h-full dark:hidden">
+            <div className="flex justify-center items-center h-full dark:hidden md:w-full">
             <Image
                 alt="Rocket Pool Scorecard Hero Image"
                 src={HeroLight}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-xl mb-4 lg:mb-0 lg:w-full lg:h-auto"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                className="rounded-xl mb-4 md:w-1/2 lg:mb-0 lg:w-full lg:h-auto"
                 priority={true}
               />
             </div>
-            <div className="hidden dark:flex dark:justify-center dark:items-center dark:h-full">
+            <div className="hidden dark:flex dark:justify-center dark:items-center dark:h-full md:w-full">
               <Image
                 alt="Rocket Pool Scorecard Hero Image"
                 src={HeroDark}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-xl mb-4 lg:mb-0 lg:w-full lg:h-auto"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                className="rounded-xl mb-4 md:w-1/2 lg:mb-0 lg:w-full lg:h-auto"
                 priority={true}
               />
             </div>
