@@ -6,20 +6,20 @@ import InputIcon from '../../../public/input.svg'
 export default function Hero() {
   return (
     <section className="w-full py-12">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-row items-center justify-between">
+      <div className="px-4 md:px-6">
+        <div className="flex flex-col-reverse items-center justify-between lg:flex-row">
           <div className="flex-1">
             <div className="space-y-6">
-              <h1 className="text-header font-poppins font-bold tracking-wide whitespace-nowrap sm:text-5xl xl:text-6xl/none">
+              <h1 className="font-poppins font-bold text-center text-5xl tracking-wide lg:whitespace-nowrap lg:text-header lg:text-left">
                 Rocket Pool Scorecard
               </h1>
-              <p className="max-w-[700px] text-gray-500 md:text-xl dark:text-white/40">
+              <p className="w-full text-center lg:text-left lg:max-w-[700px] text-gray-500 md:text-xl dark:text-white/40">
                 A scorecard of how the Rocket Pool community scores itself on factors including
                 risk, decentralization, security, and more.  
               </p>
             </div>
-            <div className="mt-10 bg-gray-100 p-10 rounded-lg border-2 border-foreground dark:border-none dark:bg-slateGray w-5/6">
-              <h2 className="text-3xl font-poppins font-bold mb-4">About the Scorecard</h2>
+            <div className="mt-10 bg-gray-100 p-10 rounded-lg border-2 border-foreground w-full dark:border-none dark:bg-slateGray lg:w-5/6">
+              <h2 className="text-center text-3xl font-poppins font-bold mb-4 lg:text-left">About the Scorecard</h2>
               <p className="text-md text-gray-500 dark:text-white/40">
                 Rocket Pool strives to create the most optimized community-governed
                 liquidity staking protocol. 
@@ -32,16 +32,12 @@ export default function Hero() {
           </div>
           <div className="flex-none">
             <div className="dark:hidden">
-              <Image
+            <Image
                 alt="Rocket Pool Scorecard Hero Image"
                 src={HeroLight}
                 sizes="100vw"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-                className="rounded-xl"
-                priority
+                className="rounded-xl mb-4 lg:mb-0 lg:w-full lg:h-auto"
+                priority={true}
               />
             </div>
             <div className="hidden dark:block">
@@ -49,26 +45,22 @@ export default function Hero() {
                 alt="Rocket Pool Scorecard Hero Image"
                 src={HeroDark}
                 sizes="100vw"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-                className="rounded-xl"
-                priority
+                className="rounded-xl mb-4 lg:mb-0 lg:w-full lg:h-auto"
+                priority={true}
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="container px-4 md:px-6 mt-32">
-        <div className="w-[45%] mt-10 ml-auto bg-gray-100 p-8 rounded-lg border-2 border-foreground dark:border-none dark:bg-slateGray">
-          <h2 className="text-xl font-poppins font-bold mb-2">Want to provide a comment / make a change?</h2>
+      <div className="w-full px-4 lg:mt-32">
+        <div className="w-full mt-10 bg-gray-100 p-8 rounded-lg border-2 border-foreground lg:w-[45%] lg:ml-auto dark:border-none dark:bg-slateGray">
+          <h2 className="text-center text-xl font-poppins font-bold mb-2 lg:text-left">Want to provide a comment / make a change?</h2>
           <p className="text-md text-gray-500 dark:text-white/40">
             Click the 
             <Image
               alt="Forum Input Link"
               src={InputIcon}
-              className="inline-block mx-2"
+              className="inline-block mx-1 lg:mx-2"
             />
             next to each Comments section to be directed to a forum thread
             specifically tailored to that section.
