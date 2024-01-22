@@ -9,7 +9,7 @@ const statusOrder: { [key in StatusType]: number } = {
   'GOOD': 1,
   'OKAY': 2,
   'NEEDS IMPROVEMENT': 3,
-  'COMMUNITY INPUT NEEDED': 4
+  'INPUT NEEDED': 4
 };
 
 // Sort the rows
@@ -45,7 +45,7 @@ export default function Scorecard() {
         return 'Where Rocket Pool is Okay but Could Improve';
       case 'NEEDS IMPROVEMENT':
         return 'Where Rocket Pool Needs Improvement';
-      case 'COMMUNITY INPUT NEEDED':
+      case 'INPUT NEEDED':
         return 'Where Rocket Pool Needs Your Community Input';
       default:
         return '';
