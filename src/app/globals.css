@@ -32,3 +32,20 @@ body {
 .border-foreground {
   border-color: rgb(var(--foreground-rgb));
 }
+
+/* Mobile styles */
+.td-class {
+  @apply px-4 py-1 md:py-3 first:rounded-t-lg last:rounded-b-lg 
+  sm:first:rounded-t-none sm:last:rounded-b-none sm:first:rounded-tl-lg 
+  sm:first:rounded-bl-lg sm:last:rounded-tr-lg sm:last:rounded-br-lg
+} 
+
+.tr-class {
+  @apply flex flex-col mb-6 mx-4 px-2 py-4 border border-accentGray rounded-md sm:table-row
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+  .td-status-class  {
+    @apply flex items-center w-full
+  }
+}

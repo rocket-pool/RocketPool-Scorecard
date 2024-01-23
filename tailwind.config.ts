@@ -21,6 +21,14 @@ const config: Config = {
         slateGray: '#293036',
         accentGray: '#3C4D5A',
       },
+      order: {
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+        6: '6'
+      },
     },
   },
   plugins: [],
