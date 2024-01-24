@@ -1,5 +1,6 @@
 import Hero from '../components/Hero/Hero'
 import Scorecard from '../components/Scorecard/Scorecard'
+import DarkModeButton from '../components/DarkModeButton'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="z-10 max-w-7xl w-full text-sm">
         <Scorecard />
       </div>
+      <DarkModeButton />
     </main>
   )
 }
