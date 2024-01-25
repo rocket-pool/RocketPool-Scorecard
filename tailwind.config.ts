@@ -21,6 +21,8 @@ const config: Config = {
         actionOrange: '#F56E0E',
         slateGray: '#293036',
         accentGray: '#3C4D5A',
+        lightMode: '#EEEFF2',
+        darkMode: '#1D252B',
       },
       order: {
         1: '1',

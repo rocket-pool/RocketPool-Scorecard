@@ -2,6 +2,7 @@ import Image from 'next/image';
 import InputIcon from '../../../public/input.svg';
 import { StatusType, Row } from '../../types/TableRowTypes';
 import Markdown from 'markdown-to-jsx';
+import '../../../src/app/globals.css';
 
 function getStatusColor(status: StatusType): string {
     switch (status) {
@@ -47,7 +48,7 @@ interface TableRowProps {
 
 
 export default function TableRow({ isEven, data }: TableRowProps) {
-    const bgColorClass = isEven ? 'bg-black/07' : 'bg-white-100 md:bg-gray-300 dark:bg-slateGray';
+    const bgColorClass = isEven ? 'bg-black/07 dark:bg-darkMode' : 'bg-white-100 md:bg-gray-300 dark:bg-slateGray';
 
     return (
         <tr className={`${bgColorClass} tr-class`}>

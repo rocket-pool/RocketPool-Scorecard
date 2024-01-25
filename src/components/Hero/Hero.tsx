@@ -18,7 +18,7 @@ export default function Hero() {
                 risk, decentralization, security, and more.  
               </p>
             </div>
-            <div className="mt-10 bg-gray-100 p-10 rounded-lg border-2 border-foreground w-full dark:border-none dark:bg-slateGray lg:w-5/6">
+            <div className="mt-10 bg-gray-100 p-10 rounded-lg border-2 border-slateGray w-full dark:border-none dark:bg-slateGray lg:w-5/6">
               <h2 className="text-center text-3xl font-poppins font-bold mb-4 lg:text-left">About the Scorecard</h2>
               <p className="text-md text-gray-500 dark:text-white/40">
                 Rocket Pool strives to create the most optimized community-governed
@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full px-4 lg:mt-32">
-        <div className="w-full mt-10 bg-gray-100 p-8 rounded-lg border-2 border-foreground lg:w-[45%] lg:ml-auto dark:border-none dark:bg-slateGray">
+        <div className="w-full mt-10 bg-gray-100 p-8 rounded-lg border-2 border-slateGray lg:w-[45%] lg:ml-auto dark:border-none dark:bg-slateGray">
           <h2 className="text-center text-xl font-poppins font-bold mb-2 lg:text-left">Want to provide a comment / make a change?</h2>
           <p className="text-md text-gray-500 dark:text-white/40">
             Click the 
