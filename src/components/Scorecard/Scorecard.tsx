@@ -56,7 +56,7 @@ export default function Scorecard() {
     <div>
       {Object.keys(groupedRows).map((assessment) => (
         <div key={assessment}>
-          <h1 className="text-xl ml-4 md:ml-0 font-poppins my-3 tracking-tighter sm:text-5xl xl:text-xl">{headerByAssessment(assessment)}</h1>
+          <h1 className="text-xl ml-4 md:ml-0 font-poppins my-3 tracking-tight sm:text-5xl xl:text-xl">{headerByAssessment(assessment)}</h1>
           <Table rows={groupedRows[assessment] as Row[]} />
         </div>
       ))}
