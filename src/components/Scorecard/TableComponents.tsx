@@ -26,7 +26,7 @@ interface StatusProps {
 function Status({ text }: StatusProps) {
   return (
       <td className="px-6 py-4 whitespace-nowrap td-class order-1 td-status-class ">
-        <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide text-white ${getStatusColor(text)}`}>
+        <span className={`px-2.5 py-0.5 rounded-full text-xs uppercase tracking-wide text-white ${getStatusColor(text)}`}>
           {text}
         </span>
         <a href="https://rocketpool.net/" target="_blank" rel="noreferrer" className="inline-flex ml-auto md:hidden">
