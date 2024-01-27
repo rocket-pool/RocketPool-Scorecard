@@ -57,4 +57,8 @@ The `tableInfo.json` file follows the following format:
 
 ## Adding New Entries
 
-To add a new entry to the scorecard, you can add a new entry to the `tableInfo.json` file located in the `assets` folder. This file contains the data for the scorecard table, including the activity names and scores. The new entry should follow the format described above. Please open a pull request with your changes.
+To add a new entry to the scorecard, you can add a new entry to the `tableInfo.json` file located in the `assets` folder. This file contains the data for the scorecard table, including the activity names and scores. The new entry should follow the format described above.
+
+## Contributing
+
+If you would like to contribute to the scorecard in any way, please feel free to open an issue or a pull request. We welcome any and all contributions!
