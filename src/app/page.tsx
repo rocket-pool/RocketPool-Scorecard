@@ -12,7 +12,9 @@ export default function Home() {
       <div className="z-10 max-w-7xl w-full text-sm">
         <Scorecard />
       </div>
-      <DarkModeButton />
+      <div className="mb-10">
+        <DarkModeButton />
+      </div>
     </main>
   )
 }
