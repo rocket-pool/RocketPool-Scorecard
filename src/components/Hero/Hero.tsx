@@ -24,9 +24,17 @@ export default function Hero() {
                 Rocket Pool strives to create the most optimized community-governed
                 liquidity staking protocol. 
                 <br className="mb-4"></br>
+                The principles of 
+                <span className="text-black font-semibold dark:text-white/90 inline"> decentralization, permissionlessness, and censorship resistance </span>
+                guide protocol-wide decisions. It is these tenets that 
+                have forged decentralized finance, and it is these goals that we
+                want to instill in Rocket Pool.
+                <br className="mb-4"></br>
                 This is why we created the Rocket Pool Scoreboard. Read our scores
                 below and feel free to share your thoughts 
                 <a href="https://rocketpool.net" className="text-actionOrange hover:text-orange-600"> here</a>.
+                Also, feel free to review other scores from organizations like the
+                <a href="https://ethereum.org" className="text-actionOrange hover:text-orange-600"> Ethereum Foundation</a>.
               </p>
             </div>
           </div>
